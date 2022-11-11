@@ -4,8 +4,7 @@ services :
         image: wissembhk/angular:latest 
         container_name: front_c 
         
-        networks: 
-          - bored-network 
+       
         ports: 
           - "8089:8089" 
         volumes: 
