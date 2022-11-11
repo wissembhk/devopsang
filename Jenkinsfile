@@ -35,11 +35,27 @@ pipeline
             {
                 script
                 {
-                   // dockerImage=docker.build registry+":$BUILD_NUMBER"
-                   sh 'docker build -t wissembhk/angular .'
+                    dockerImage=docker.build registry+":$BUILD_NUMBER"
+                  // sh 'docker build -t wissembhk/angular .'
                 }
             }
         }
+         stage("Login to DockerHub") {
+                steps{
+
+                    sh 'docker login -u wissembhk -p Wi123052993021@'
+                }
+        }
+        stage('docker hub')
+         {
+             steps{
+                 script{
+                    dockerImage.push()
+
+                 }
+             }
+         }
+       
        
         
         stage('image up')
