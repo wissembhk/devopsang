@@ -1,7 +1,7 @@
 version: "3.3"
 services :
     angular-app: 
-        image: alaabenfradj/front:latest 
+        image: wissembhk/angular:latest 
         container_name: front_c 
         
         networks: 
