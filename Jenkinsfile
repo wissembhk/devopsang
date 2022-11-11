@@ -35,8 +35,8 @@ pipeline
             {
                 script
                 {
-                    dockerImage=docker.build registry+":$BUILD_NUMBER"
-                  // sh 'docker build -t wissembhk/angular .'
+                   // dockerImage=docker.build registry+":$BUILD_NUMBER"
+                   sh 'docker build -t wissembhk/angular .'
                 }
             }
         }
