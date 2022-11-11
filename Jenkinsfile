@@ -40,23 +40,7 @@ pipeline
                 }
             }
         }
-         stage("Login to DockerHub") {
-                steps{
-
-                    sh 'docker login -u wissembhk -p Wi123052993021@'
-                }
-        }
-        stage('docker hub')
-         {
-             steps{
-                 script{
-                    dockerImage.push()
-
-                 }
-             }
-         }
-       
-       
+   
         
         stage('image up')
         {
