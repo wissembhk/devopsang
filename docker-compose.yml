@@ -3,11 +3,10 @@ services :
     angular-app: 
         image: alaabenfradj/front:latest 
         container_name: front_c 
-        depends_on: 
-          - tpachat 
+        
         networks: 
           - bored-network 
         ports: 
-          - "4200:4200" 
+          - "8089:8089" 
         volumes: 
           - fv:/var/lib/fv 
